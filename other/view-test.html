@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+			body{
+				background-color: blue;
+			}
+			@media screen and (max-width: 480px) {
+			body {
+				background-color: red;
+			}
+			}
+			.frame {
+			  display: grid;
+			  grid-template-columns: auto;
+              grid-template-rows: 10vh 85vh 30vh;
+			  grid-gap: 10px;
+			  background-color: #2196F3;
+			  padding: 10px;
+			  border: 5px solid black;
+
+			}
+			.header {
+				border: 1px solid black;
+				display: grid;
+				grid-template-columns: 30vw 65vw;
+				grid-template-rows: auto;
+				margin: auto;
+			}
+			.main {
+				border: 5px solid black;
+
+			}
+			.footer {
+				border: 5px solid black;
+
+			}
+			.logo {
+				width: 30vw;
+			}
+			.links-frame{
+				min-width: none;
+			}
+			.head1, .head2, .head3, .head4{
+				float: right;
+				display:inline-flex;
+				border: 1px solid black;
+				margin: auto;
+				padding: 0 3vw 0 3vw;
+			}
+		</style>
+	</head>
+	<div class="frame">
+		<div class="header">
+			<div class="logo">Logo .......................</div>
+			<div class="links-frame">
+				<div class="head1">Menu</div>
+				<div class="head2">Menu</div>
+				<div class="head3">Cart</div>
+				<div class="head4">Login</div>
+			</div>
+		</div>
+		<div class="main">Body</div>
+		<div class="footer">Footer</div>  
+		
+	  </div>
+</html>
