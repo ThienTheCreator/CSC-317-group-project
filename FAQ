@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>FAQ</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td> &emsp;&emsp;&emsp;&emsp;<a href="index.html"> <img src="img/logo.png" alt="logo" height="100px" width="100px"></a></td>
+            <td> &emsp;&emsp;<input type="text" placeholder="Search..">
+                <img src="img/1024px-Search_Icon.svg.png" alt="" width="20px" height="20px"></td>
+        </tr>
+    </table>
+    <header>
+
+        <nav>
+
+            <ul>
+                <center> <a href="ourmenu.html">Our Menu</a>&emsp;&emsp;&emsp;&emsp;
+                    <a href="specials.html">Specials</a>&emsp;&emsp;&emsp;&emsp;
+                    <a href="others.html">Others</a>&emsp;&emsp;&emsp;&emsp;
+                    <a href="faq.html">FAQ</a>&emsp;&emsp;&emsp;&emsp;
+                    <a href="aboutus.html">About Us</a>&emsp;&emsp;&emsp;&emsp;
+                    <a href="register.html">Login/Register</a>&emsp;&emsp;&emsp;&emsp;
+                </center>
+            </ul>
+
+        </nav>
+    </header>
+    <hr>
+    <section>
+
+        <form>
+            <br><br>
+            <center>
+                <h1>FAQ:</h1>
+            </center>
+            <ul>
+                <li>Does SF kitchen work 24/7? <br>
+                    Duh...You already know! ! </li><br>
+                <li>Is there any delivery free? <br>
+                    Yes, we charge a small amount to cover transportation expenses to our drivers. And, the first delivery is free</li><br>
+                <li>How does drone delivery work? <br>
+                    Drones are controlled by gps from our server, you will get text once our drone is outside you house.</li><br>
+                <li>Are you open for outdoor dining? <br>
+                    Yes, and we closely follow SFâ€™s guidelines to provide a safe experience for everyone. Customers and staff must wear masks,<br>
+                    remain 6 feet apart whenever possible, and may only dine in with a maximum party of 6.</li><br>
+            </ul>
+
+        </form>
+
+
+    </section>
+    <footer></footer>
+</body>
+
+</html>
