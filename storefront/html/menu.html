@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Home</title>
+		<title>Menu</title>
 	</head>
 	<body>
 		<header>
@@ -15,41 +15,52 @@
 							<b><font size=10px color="orange">SF Kitchen</font></b>
 						</td>
 						<td> &emsp;&emsp;
-							<input type="text" placeholder="Search..">
+							<label for="search"></label>
+										<input list="searches" id="search" name="search" placeholder="Search..">
+											<datalist id="searches">
+												<option value="Menu">
+												<option value="Popular Items">
+												<option value="Special Deal">
+												<option value="Payment">
+												<option value="FAQ">
+												<option value="About Us">
+												<option value="Login">
+												<option value="Register">
+											</datalist>
 							<img src="img/1024px-Search_Icon.svg.png" alt="" width="20px" height="20px">
 						</td>
 					</tr>
 				</table>
 			</center>
 			<table border="0" align="center" bgcolor="white" cellpadding="20">
-				<tr>
-					<td valign="top" align=center>
-						<p><a href="menu.html">Our Menu</font></a></p>
-					</td>
-					<td valign="top" align=center>
-						<p><a href="popular.html">Popular Items</font></a></p>
-					</td>
-					<td valign="top" align="center">
-						<p><a href="specials.html">Special Deal</font></a></p>
-					</td>
-					<td valign="top" align="center">
-						<p><a href="order.html">Payment</font></a></p>
-					</td>
-					<td valign="top" align="center">
-						<p><a href="faq.html">FAQ</font></a></p>
-					</td>
-					<td valign="top" align="center">
-						<p><a href="aboutUs.html">About Us</font></a></p>
-					</td>
-					<td valign="top" align="center">
-						<p>
-							<a href="login.html">Login</font></a>
-							<nobr>&nbsp/</nobr>
-							<a href="register.html">Register</a>
-						</p>
-					</td>
-				</tr>
-			</table>
+							<tr>
+								<td valign="top" align=center>
+									<p><a href="menu.html"><b><i>Our Menu</i></b></a></p>
+								</td>
+								<td valign="top" align=center>
+									<p><a href="popular.html"><b><i>Popular Items</i></b></a></p>
+								</td>
+								<td valign="top" align="center">
+									<p><a href="specials.html"><b><i>Special Deal</i></b></a></p>
+								</td>
+								<td valign="top" align="center">
+									<p><a href="order.html"><b><i>Payment</i></b></a></p>
+								</td>
+								<td valign="top" align="center">
+									<p><a href="faq.html"><b><i>FAQ</i></b></a></p>
+								</td>
+								<td valign="top" align="center">
+									<p><a href="aboutUs.html"><b><i>About Us</i></b></a></p>
+								</td>
+								<td valign="top" align="center">
+									<p>
+										<a href="login.html"><b><i>Login</i></b></a>
+										<nobr>&nbsp/</nobr>
+										<a href="register.html"><b><i>Register</i></b></a>
+									</p>
+								</td>
+							</tr>
+						</table>
 		</header>
 		<hr>
 		</hr>
@@ -71,7 +82,8 @@
 						<table class="menu" width="800" height="600" alt="">
 							<tr>
 								<td class="menu_cells"><img src="img/food0.jpg" alt="food item" width="260" height="150">
-									</img><label>name:$9.99</label>&nbsp;
+									</img><label>Beef:$9.99</label>
+									<br></br>
 									<button>-</button>&nbsp;
 									<input type="text" id="food1_count" name="food1_count" value ="0" maxlength="2" size="1">&nbsp;
 									<button>+</button>&nbsp;
@@ -80,7 +92,8 @@
 								<td class="menu_cells">
 									<img src="img/food1.jpg" alt="food item" width="260" height="150">
 									</img>
-									<label>name:$9.99</label>&nbsp;
+									<label>Ribs:$9.99</label>
+									<br></br>
 									<button>-</button>&nbsp;
 									<input type="text" id="food1_count" name="food1_count" value ="0" maxlength="2" size="1">&nbsp;
 									<button>+</button>&nbsp;
@@ -88,7 +101,8 @@
 								</td>
 								<td class="menu_cells">
 									<img src="img/food2.jpg" alt="food item" width="260" height="150"></img>
-									<label>name:$9.99</label>&nbsp;
+									<label>Pizza:$9.99</label>
+									<br></br>
 									<button>-</button>&nbsp;
 									<input type="text" id="food1_count" name="food1_count" value ="0" maxlength="2" size="1">&nbsp;
 									<button>+</button>&nbsp;
@@ -98,14 +112,16 @@
 							</tr>
 							<tr>
 								<td class="menu_cells"><img src="img/food3.jpg" alt="food item" width="260" height="150"></img>
-									<label>name:$9.99</label>&nbsp;
+									<label>Fried Rice:$9.99</label>
+									<br></br>
 									<button>-</button>&nbsp;
 									<input type="text" id="food1_count" name="food1_count" value ="0" maxlength="2" size="1">&nbsp;
 									<button>+</button>&nbsp;
 									<button>order</button>
 								</td>
 								<td class="menu_cells"><img src="img/food4.jpg" alt="food item" width="260" height="150">
-									</img><label>name:$9.99</label>&nbsp;
+									</img><label>Sandwich:$9.99</label>
+									<br></br>
 									<button>-</button>&nbsp;
 									<input type="text" id="food1_count" name="food1_count" value ="0" maxlength="2" size="1">&nbsp;
 									<button>+</button>&nbsp;
@@ -113,7 +129,8 @@
 								</td>
 								<td class="menu_cells"><img src="img/food5.jpg" alt="food item" width="260" height="150">
 									</img>
-									<label>name:$9.99</label>&nbsp;
+									<label>Burger:$9.99</label>
+									<br></br>
 									<button>-</button>&nbsp;
 									<input type="text" id="food1_count" name="food1_count" value ="0" maxlength="2" size="1">&nbsp;
 									<button>+</button>&nbsp;
@@ -122,21 +139,24 @@
 							</tr>
 							<tr>
 								<td class="menu_cells"><img src="img/food6.jpg" alt="food item" width="260" height="150"></img>
-									<label>name:$9.99</label>&nbsp;
+									<label>Chicken:$9.99</label>
+									<br></br>
 									<button>-</button>&nbsp;
 									<input type="text" id="food1_count" name="food1_count" value ="0" maxlength="2" size="1">&nbsp;
 									<button>+</button>&nbsp;<button>order</button>
 								</td>
 								<td class="menu_cells">
 									<img src="img/food7.jpg" alt="food item" width="260" height="150"></img>
-									<label>name:$9.99</label>&nbsp;
+									<label>Tacos:$9.99</label>
+									<br></br>
 									<button>-</button>&nbsp;
 									<input type="text" id="food1_count" name="food1_count" value ="0" maxlength="2" size="1">&nbsp;
 									<button>+</button>&nbsp;
 									<button>order</button>
 								</td>
 								<td class="menu_cells"><img src="img/food8.jpg" alt="food item" width="260" height="150"></img>
-									<label>name:$9.99</label>&nbsp;
+									<label>Vegi:$9.99</label>
+									<br></br>
 									<button>-</button>&nbsp;
 									<input type="text" id="food1_count" name="food1_count" value ="0" maxlength="2" size="1">&nbsp;
 									<button>+</button>&nbsp;
@@ -167,7 +187,7 @@
 							<table align="center" width="90" border="0" cellspacing="0" cellpadding="0">
 								<tr>
 									<td height="60">
-										<a href="popular.html"><img src="img/food2.jpg" alt="popular" width="80" height="50"></a>
+										<a href="popular.html"><img src="img/duck.jpg" alt="popular" width="80" height="50"></a>
 										<label for=""></label>
 									</td>
 								</tr>
@@ -177,7 +197,7 @@
 							<table align="center" width="90" border="0" cellspacing="0" cellpadding="0">
 								<tr>
 									<td height="60">
-										<a href="popular.html"><img src="img/food5.jpg" alt="popular" width="80" height="50"></a>
+										<a href="popular.html"><img src="img/steak.jpg" alt="popular" width="80" height="50"></a>
 										<label for=""></label>
 									</td>
 								</tr>
@@ -187,7 +207,7 @@
 							<table align="center" width="90" border="0" cellspacing="0" cellpadding="0">
 								<tr>
 									<td height="60">
-										<a href="popular.html"><img src="img/food1.jpg" alt="popular" width="80" height="50"></a>
+										<a href="popular.html"><img src="img/lobster.jpg" alt="popular" width="80" height="50"></a>
 										<label for=""></label>
 									</td>
 								</tr>
