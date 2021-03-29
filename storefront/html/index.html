@@ -3,15 +3,16 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Home</title>
+		<link rel="stylesheet" type="text/css" href="mystyle.css"/>
 	</head>
 	<body>
-		<header>
+		<header id="navBar">
 			<center>
 				<table>
 					<tr>
 						<td> &emsp;&emsp;&emsp;&emsp;
 							<a href="index.html">
-							<img src="img/logo.png" alt="logo" height="100px" width="100px"></a><b>
+							<img id="scotter" src="img/logo.png" alt="logo" height="100px" width="100px"></a><b>
 							<font size=10px color="orange">SF Kitchen</font></b>
 						</td>
 						<td> &emsp;&emsp;
@@ -64,71 +65,32 @@
 		</header>
 		<hr>
 		</hr>
-		<section>
-			<table cellpadding="20" cellspacing="6" align="center">
-				<tr>
-					<td>
-						<table align="center" width="120" height="600" border="0" cellspacing="0" cellpadding="0">
-							<tr>
-								<td>
-									<a href="aboutUs.html"><img src="img/ad.jpng" width="160px" height="600px"></a>
-								</td>
-							</tr>
-						</table>
-					</td>
-					<td>
-						<img src="img/fast-food.jpg" width="800" height="600" alt="">
-					</td>
-					<td><a href="img/Advertisement.png"><img width="300" src="img/Advertisement.png"></a></td>
-				</tr>
+		<div>
+		<div class="wrapper-index">
+  			<div class="item item1">
+				<a href="aboutUs.html"><img src="img/ad.jpng" width="160px" height="600px"></a>
 			</table>
-		</section>
-		<aside>
-			<center>
-				<table>
-					<tr>
-						<td>
-							<table align="center" width="150" border="0" cellmargin="0" cellspacing="0" cellpadding="10">
-								<tr>
-									<td width="200">
-										<label for="">Popular Items:</label>
-									</td>
-								</tr>
-							</table>
-						</td>
-						<td>
-							<table align="center" width="90" border="0" cellspacing="0" cellpadding="3">
-								<tr>
-									<td height="60">
-										<a href="popular.html"><img src="img/duck.jpg" alt="popular" width="80" height="50"></a>
-										<label for=""></label>
-									</td>
-								</tr>
-							</table>
-						</td>
-						<td>
-							<table align="center" width="90" border="0" cellspacing="0" cellpadding="3">
-								<tr>
-									<td height="60">
-										<a href="popular.html"><img src="img/steak.jpg" alt="popular" width="80" height="50"></a>
-										<label for=""></label>
-									</td>
-								</tr>
-							</table>
-						</td>
-						<td>
-							<table align="center" width="90" border="0" cellspacing="0" cellpadding="3">
-								<tr>
-									<td height="60">
-										<a href="popular.html"><img src="img/lobster.jpg" alt="popular" width="80" height="50"></a>
-										<label for=""></label>
-									</td>
-								</tr>
-							</table>
-						</td>
-					</tr>
-				</table>
-			</center>
-		</aside>
+  			</div>
+  			<div class="item item2">
+  				<img src="img/fast-food.jpg" width="800" height="600" alt="">
+  			</div>
+  			<div class="item item3">
+  				<a href="img/Advertisement.png"><img src="img/Advertisement.png" width="300"></a>
+  			</div>
+  			<div class="item item4">
+  				<div>
+				<label for="">Popular Items:</label>
+				</div>
+				<div>
+				<a href="popular.html"><img src="img/duck.jpg" alt="popular" width="80" height="50"></a>
+				</div>
+				<div>
+				<a href="popular.html"><img src="img/steak.jpg" alt="popular" width="80" height="50"></a>
+				</div>
+				<div>
+				<a href="popular.html"><img src="img/lobster.jpg" alt="popular" width="80" height="50"></a>
+  				</div>
+  			</div>
+		</div>
 	</body>
 </html>
