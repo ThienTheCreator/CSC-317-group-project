@@ -3,7 +3,7 @@ body {
 }
 
 .navBar{
-	
+	font-family: Helvetica, Arial, sans-serif;
 }
 
 .navBar div{
@@ -85,7 +85,7 @@ h1 {
             height: 400px;
             clear: both;
             position: relative;
-           
+            
             -webkit-transition: left 2s;
             -moz-transition: left 2s;
             -o-transition: left 2s;
@@ -149,3 +149,69 @@ h1 {
 	padding: 10px;
 }
 
+/*Box for Login and Register*/
+
+.background {
+	height: 1000px;
+	background-image: url('../html/img/login_Register_background.jpg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	overflow: auto;
+}
+
+.box{
+	display: block;
+	margin: auto auto auto auto;
+	background: #000;
+	color: #fff;
+	padding: 30px;
+}
+
+.box > h1{
+	text-align: center;
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	color: #00FF7F;
+}
+
+.box input[type="text"], .box input[type="password"], .box input[type="email"]{
+	border-bottom: 1px solid #fff;
+	background: transparent;
+	height: 40px;
+	width: 100%;
+	margin-bottom: 20px;
+	color: #fff;
+	font-size: 16px;
+}
+
+.box input[type="submit"]{
+	height: 40px;
+	width: 100%;
+	border: none;
+	outline: none;
+	background: #00CED1;
+	color: #fff;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.box a{
+	color: white;
+}
+
+/*Login*/
+
+#login{
+	margin-top: 200px;
+	width: 320px;
+	height: 420px;
+}
+
+/*Register*/
+
+#register{
+	margin-top: 100px;
+	width: 320px;
+	height: 700px;
+}

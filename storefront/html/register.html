@@ -62,76 +62,39 @@
 		</header>
 		<hr>
 		</hr>
-		<table border="0" align="center" bgcolor="white">
-		<tr>
-			<td>
-				<table border="0" width="500" height="600" align="center" valign="middle">
-					<tr>
-						<td align="center" bgcolor="#cccccc">
-							<b><font color="#009933">Register New Account</font></b>
-						</td>
-					</tr>
-					<tr>
-						<td bgcolor="#f2f2f2">
-							<form>
-								<table border="0" align="center" valign="middle" width="250" height = "450">
-									<tr>
-										<td align="left">
-											<legend>First Name:</legend>
-											<label for="firstName"></label>
-											<input type="text" name="firstName" placeholder="John"required>
-										</td>
-									</tr>
-									<tr>
-										<td align="left">
-											<legend>Last Name:</legend>
-											<label for="lastName"></label>
-											<input type="text" name="lastName" placeholder="Doe" required>
-										</td>
-									</tr>
-									<tr>
-										<td align="left">
-											<legend>Email: </legend>
-											<label for="Email"></label>
-											<input type="email" name="Email" placeholder="Email@mail.com" required>
-										</td>
-									</tr>
-									<tr>
-										<td align="left">
-											<legend>Username: </legend>
-											<label for="userName"></label>
-											<input type="text" name = "userName" placeholder="IAmUser" required>
-										</td>
-									</tr>
-									<tr>
-										<td align="left">
-											<legend>Password:</legend>
-											<label for="passW"></label>
-											<input type="password" name="passW" placeholder="Password" required>
-										</td>
-									</tr>
-									<tr>
-										<td align="left">
-											<legend>Re-enter Password:</legend>
-											<label for="passW"></label>
-											<input type="password" name="passW" placeholder="Password" required>
-										</td>
-									</tr>
-									<tr>
-										<td align="center" valign="middle">
-											<input type="submit" value="Register">
-										</td>
-									</tr>
-									<tr>
-										<td align="center">
-											<p>Already have an account?</p>
-											<a href="login.html">Login</a>
-										</td>
-									</tr>
-								</table>
-							</form>
-						</td>
-					</tr>
-				</table>
+		<div class="background">
+			<div class="box" id="register">
+			<h1>Sign Up</h1>
+			<form>	
+				<legend>First Name:</legend>
+				<label for="firstName"></label>
+				<input type="text" name="firstName" placeholder="John"required>
+					
+				<legend>Last Name:</legend>
+				<label for="lastName"></label>
+				<input type="text" name="lastName" placeholder="Doe" required>
+				
+				<legend>Email: </legend>
+				<label for="Email"></label>
+				<input type="email" name="Email" placeholder="Email@mail.com" required>
+						
+				<legend>Username: </legend>
+				<label for="userName"></label>
+				<input type="text" name = "userName" placeholder="IAmUser" required>
+					
+				<legend>Password:</legend>
+				<label for="passW"></label>
+				<input type="password" name="passW" placeholder="Password" required>
+								
+				<legend>Re-enter Password:</legend>
+				<label for="passW"></label>
+				<input type="password" name="passW" placeholder="Password" required>
+						
+				<input type="submit" value="Register">
+
+				<a href="login.html">Already have an account? Login</a>
+			</form>
+			</div>
+		</div>
 	</body>
 </html>
