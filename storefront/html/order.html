@@ -11,7 +11,7 @@
 				<div class="logo">
 						<div>
 							<a href="index.html">
-							<img id="scotter" src="img/logo.png" alt="logo" height="100px" width="100px"></a><b>
+							<img id="scotter" src="../img/logo.png" alt="logo" height="100px" width="100px"></a><b>
 							<font size=10px color="orange">SF Kitchen</font></b>
 						</div>
 						<div> 
@@ -27,7 +27,7 @@
 												<option value="Login">
 												<option value="Register">
 											</datalist>
-							<img src="img/1024px-Search_Icon.svg.png" alt="" width="20px" height="20px">
+							<img src="../img/1024px-Search_Icon.svg.png" alt="" width="20px" height="20px">
 						</div>
 				</div>
 			</center>
@@ -99,14 +99,18 @@
 							<td> <input type="text" name="" placeholder="Little Nightmares"></td>
 							<td width=100></td>
 							<td width=""><label for=""> Please Chooose an option</label><br>
-								<input type="checkbox">
-								<label for=""> Pickup</label>
-								<br>
-								<input type="checkbox">
-								<label for=""> Delivery</label>
-								<br>
-								<input type="checkbox">
-								<label for=""> Drone Delivery</label>
+								<label class="container">Pick Up
+								  <input type="radio" checked="checked" name="radio">
+								  <span class="checkmark"></span>
+								</label>
+								<label class="container">Delivery
+								  <input type="radio" name="radio">
+								  <span class="checkmark"></span>
+								</label>
+								<label class="container">Drone Delivery
+								  <input type="radio" name="radio">
+								  <span class="checkmark"></span>
+								</label>
 							</td>
 						</tr>
 						<tr>
@@ -137,7 +141,7 @@
 						<tr>
 							<td></td>
 							<td height="100">
-								<img align="center" src="img/payment.jpg" alt="Payment Method" width="230">
+								<img align="center" src="../img/payment.jpg" alt="Payment Method" width="230">
 							</td>
 						</tr>
 						<tr>
