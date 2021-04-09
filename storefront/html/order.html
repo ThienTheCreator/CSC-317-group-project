@@ -10,7 +10,7 @@
 			<center>	
 				<div class="logo">
 						<div>
-							<a href="index.html">
+							<a href="../index.html">
 							<img id="scotter" src="../img/logo.png" alt="logo" height="100px" width="100px"></a><b>
 							<font size=10px color="orange">SF Kitchen</font></b>
 						</div>
@@ -63,95 +63,63 @@
 		<hr>
 		</hr>
 		<center>
-		<table border=0 width="300">
-		<tr>
-			<td>
-				<h3>Cart</h3>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<p>
-					------------------<br></br>
-					Item1   $1:00<br></br>
-					Item2   $4:00<br></br>	
-					_____________<br></br>
-					Total:  $5:00<br></br>
-				</p>
-			</td>
-		</tr>
-		<table>
-		<center>
-		<section>
-			<center>
-				<form>
-					<br>
-					<table border=0>
-						<tr>
-							<td align="center" colspan="2">
-								<label><b>Order My Lunch</b></label>
-							</td>
-						</tr>
-						<tr>
-							<td width="150">
-								<label for="">Name on Card:</label>
-							</td>
-							<td> <input type="text" name="" placeholder="Little Nightmares"></td>
-							<td width=100></td>
-							<td width=""><label for=""> Please Chooose an option</label><br>
-								<label class="container">Pick Up
-								  <input type="radio" checked="checked" name="radio">
-								  <span class="checkmark"></span>
-								</label>
-								<label class="container">Delivery
-								  <input type="radio" name="radio">
-								  <span class="checkmark"></span>
-								</label>
-								<label class="container">Drone Delivery
-								  <input type="radio" name="radio">
-								  <span class="checkmark"></span>
-								</label>
-							</td>
-						</tr>
-						<tr>
-							<td> <label for="">Card Number:</label></td>
-							<td>
-								<input type="text" name="" placeholder="1111-2222-3333-4444-5555">
-							</td>
-						</tr>
-						<tr>
-							<td> <label for="">Expiration Date:</label></td>
-							<td>
-								<input type="text" name="" placeholder="11/1111">
-							</td>
-							<br>
-						</tr>
-						<tr>
-							<td> <label for="">Cvv Code:</label></td>
-							<td>
-								<input type="text" name="" placeholder="000"> 
-							</td>
-						</tr>
-						<tr>
-							<td><label for="">Zip Code:</label></td>
-							<td>
-								<input type="text" name="" placeholder="0000">
-							</td>
-						</tr>
-						<tr>
-							<td></td>
-							<td height="100">
-								<img align="center" src="../img/payment.jpg" alt="Payment Method" width="230">
-							</td>
-						</tr>
-						<tr>
-							<td></td>
-							<td align="center"><button>Order Now</button></td>
-						</tr>
-					</table>
-				</form>
-			</center>
-			<br>
-		</section>
+		<div>
+			<h3>Cart</h3>
+			<p>
+				------------------<br></br>
+				Item1   $1:00<br></br>
+				Item2   $4:00<br></br>	
+				_____________<br></br>
+				Total:  $5:00<br></br>
+			</p>
+		</div>
+		<div class="orderContent">
+			<h1><b>Order My Lunch</b></h1>
+			<form>
+				<div class="cardInfo">
+					<div>
+						<label for="">Name on Card:</label>
+						<input type="text" name="" placeholder="Little Nightmares">
+					</div>
+					<div>
+						<label for="">Card Number:</label>
+						<input type="text" name="" placeholder="1111-2222-3333-4444-5555">
+					</div>
+					<div>
+						<label for="">Expiration Date:</label>
+						<input type="text" name="" placeholder="11/1111">
+					</div>
+					<div>
+						<label for="">Cvv Code:</label>
+						<input type="text" name="" placeholder="000"> 
+					</div>
+					<div>
+						<label for="">Zip Code:</label>
+						<input type="text" name="" placeholder="0000">
+					</div>
+				</div>
+				<div id="payImage">
+					<img src="../img/payment.jpg" alt="Payment Method" width="230">
+				</div>
+				<div class="delivery">
+					<br><label for=""> Please Chooose an option</label><br>
+					<label class="container">Pick Up
+						<input type="radio" checked="checked" name="radio">
+						<span class="checkmark"></span>
+					</label>
+					<label class="container">Delivery
+						<input type="radio" name="radio">
+						<span class="checkmark"></span>
+					</label>
+					<label class="container">Drone Delivery
+						<input type="radio" name="radio">
+						<span class="checkmark"></span>
+					</label>
+				</div>
+				<div>
+					<button>Order Now</button>
+				</div>
+			</form>
+		</div>
 	</body>
 </html>

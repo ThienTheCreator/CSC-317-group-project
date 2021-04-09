@@ -1,7 +1,9 @@
-body {
+body{
   background-color: white;
 }
 
+
+/* Logo and Navigation */
 .navBar{
 	font-family: Helvetica, Arial, sans-serif;
 }
@@ -31,11 +33,7 @@ body {
 	padding: 0px 40px 0px 40px;
 }
 
-h1 {
-  color: navy;
-  margin-left: 20px;
-}
-
+/* Scooter Annimation */ 
 #scotter{
 	width: 100px;
 	height: 100px;
@@ -47,7 +45,8 @@ h1 {
 	100%	{transform: translate(0px,0px);}
 }
 
-.wrapper-index {
+/* General layout of contexts */
+.contentLayout {
 	display: grid;
 	padding: 10px;
 	grid-template-columns: 1fr 800px 1fr;
@@ -56,32 +55,136 @@ h1 {
 	grid-row-gap:1em;
 }
 
-.wrapper-index div{
+.contentLayout div{
 	background: white;
 }
-.item1{
+
+.ad1{
 	padding-right: 30px;
 	text-align: right;
 	vertical-align: bottom;
 }
 
-
-.item3{
+.ad2{
 	padding-left: 20px;
 	display: flex;
 	align-items: center;
 	height: 100%;
 }
-.item4{
+.itemsPopular{
 	display: flex;
 	grid-column: 2;
 	justify-content: center;	
 	align-items: center;
 }
 
-.item4 div{
+.itemsPopular div{
 	padding: 10px;
 }
+
+
+/* Menu */
+.menuItems{
+	display: grid;
+	padding: 10px;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-column-gap:1em;
+	grid-row-gap:1em;
+}
+
+
+/* Items for popular and specials*/
+.verticalItems{
+	display: flex;
+	padding-top: 150px;
+}
+
+.verticalItems > div{
+	margin: auto auto auto auto;
+}
+
+/* Payment */
+.orderContent{
+	width: 400px;
+	justify-content: center; 
+}
+
+.cardInfo{
+	display: inline-block
+	width: 390px;
+	background: #fff;
+	text-align: right;
+}
+
+.cardInfo > div{
+	padding: 10px 0px 10px 0px;
+}
+
+#payImage{
+	display: block;	
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px; 
+	width: 50%;
+	background: #fff;
+}
+
+.delivery{
+	width: 250px;
+}
+
+
+/* FAQ */
+.faqContent{
+	width: 800px;
+	margin: 0px auto auto auto;
+	justify-content: center;
+}
+
+@media only screen and (max-width: 800px) {
+.faqContent{
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	min-width: 400px;
+	flex-basis: auto; 
+  	flex-grow: 1;
+	flex-direction: column;
+}
+}
+
+#house{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+/* About Us */
+.aboutContent{
+	width: 800px;
+	margin: 0px auto auto auto;
+	justify-content: center;
+}
+
+@media only screen and (max-width: 800px) {
+.aboutContent{
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	min-width: 400px;
+	flex-basis: auto; 
+  	flex-grow: 1;
+	flex-direction: column;
+}
+}
+
+.aboutContent > h1,.aboutContent > p,.aboutContent > div{
+	display: flex;
+	justify-content: center;
+}
+
 
 /*Box for Login and Register*/
 
@@ -134,13 +237,15 @@ h1 {
 	color: black;
 }
 
-/*Login*/
+
+/* Login */
 
 #login{
 	margin-top: 200px;
 	width: 320px;
 	height: 420px;
 }
+
 
 /*Register*/
 
@@ -153,57 +258,57 @@ h1 {
 
 /* The container */
 .container {
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  font-size: 22px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+	display: block;
+	position: relative;
+	padding-left: 35px;
+	margin-bottom: 12px;
+	cursor: pointer;
+	font-size: 22px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 /* Custom Radio Button */
 /* Hide the browser's default radio button */
 .container input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
 }
 
 /* Create a custom radio button */
 .checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
-  border-radius: 50%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 25px;
+	width: 25px;
+	background-color: #eee;
+	border-radius: 50%;
 }
 
 /* On mouse-over, add a grey background color */
 .container:hover input ~ .checkmark {
-  background-color: #ccc;
+	background-color: #ccc;
 }
 
 /* When the radio button is checked, add a blue background */
 .container input:checked ~ .checkmark {
-  background-color: #2196F3;
+	background-color: #2196F3;
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
 .container:after {
-  content: "";
-  position: absolute;
-  display: none;
+	content: "";
+	position: absolute;
+	display: none;
 }
 
 /* Show the indicator (dot/circle) when checked */
 .container input:checked ~ .checkmark:after {
-  container: block;
+	container: block;
 }
 
 /* Style the indicator (dot/circle) */
