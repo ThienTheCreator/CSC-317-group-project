@@ -111,7 +111,7 @@ body{
 }
 
 .cardInfo{
-	display: inline-block
+	display: inline-block;
 	width: 390px;
 	background: #fff;
 	text-align: right;
