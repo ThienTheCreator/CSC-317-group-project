@@ -4,6 +4,43 @@ if (document.readyState == 'loading') {
     ready()
 }
 
+webStorage = window.sessionStorage;
+
+// Food object to be added to cart
+class FoodItem{
+    constructor(name, price, amount){
+        this.name = name;
+        this.price = price;
+        this.amount = amount;
+    }
+}
+
+// Cart object to be passed to the cart page
+class FoodCart{
+    constructor(){
+        this.cart = new Map();
+        this.FoodItem = [];
+    }
+
+    //Function to add new item to cart
+    updateCart(name, price, amount){
+        if (this.cart.has(name)){
+            this.cart.get(name).amount = amount;
+        } else {
+            var newItem = new FoodItem(name, price, amount);
+            this.cart.set(name, newItem);
+        }
+
+        webStorage.setItem('cart', this.cart);
+
+        console.log(name + ": " + this.cart.get(name).price + ", " + this.cart.get(name).amount);
+        
+    }
+}
+
+var food_cart = new FoodCart();
+
+
 function ready(){
     var addButtons = document.getElementsByClassName("button-add");
     console.log(addButtons);
@@ -32,8 +69,13 @@ function ready(){
 }
 
 function quantityChanged(event){
-    console.log(event.target);
-    console.log("quant changed");
+    var input = event.target;
+    var food = input.parentElement;
+    var name = food.getElementsByClassName("shop-item-title")[0].innerText;
+    var price = food.getElementsByClassName("shop-item-price")[0].innerText;
+    var foodQuant = food.getElementsByClassName("food-quantity")[0];
+
+    food_cart.updateCart(name, price, foodQuant.value);
 }
 
 function addCartItem(event){
@@ -44,6 +86,8 @@ function addCartItem(event){
     var foodQuant = food.getElementsByClassName("food-quantity")[0];
 
     foodQuant.value = parseInt(foodQuant.value)+1;
+
+    food_cart.updateCart(name, price, foodQuant.value);
 }
 
 function removeCartItem(event){
@@ -58,5 +102,9 @@ function removeCartItem(event){
     } else {
         console.log("quant is at minimum");
     }
-    
+    food_cart.updateCart(name, price, foodQuant.value);    
+}
+
+function changeAmount(name, price, amount){
+
 }
