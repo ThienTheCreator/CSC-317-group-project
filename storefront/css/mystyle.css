@@ -93,6 +93,13 @@ body{
 	grid-row-gap:1em;
 }
 
+#menu_container{
+	text-align: center;
+}
+#menu_name,#menu_price{
+	display: inline;
+}
+
 
 /* Items for popular and specials*/
 .verticalItems{
