@@ -33,6 +33,40 @@ body{
 	padding: 0px 40px 0px 40px;
 }
 
+
+/* Cart */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,.5);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
+}
+
+
 /* Scooter Annimation */ 
 #scotter{
 	width: 100px;
@@ -44,6 +78,10 @@ body{
 	0%	{transform: translate(-160px,0px);}
 	100%	{transform: translate(0px,0px);}
 }
+
+
+
+
 
 /* General layout of contexts */
 .contentLayout {
@@ -431,4 +469,5 @@ body{
     font-size: 35px;
     color: rgb(255, 255, 255);
     text-shadow: rgb(0, 0, 0) 2px 2px 2px;
+	background: rgba(0,0,0,0);
 }
