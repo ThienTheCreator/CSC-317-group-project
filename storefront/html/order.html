@@ -4,6 +4,7 @@
 		<meta charset="utf-8">
 		<title>Payment</title>
 		<link rel="stylesheet" type="text/css" href="../css/mystyle.css">
+		<script src="../js/cart.js"></script>
 	</head>
 	<body>
 		<header class="navBar">
@@ -62,19 +63,13 @@
 		</header>
 		<hr>
 		</hr>
-		<center>
-		<div>
-			<h3>Cart</h3>
-			<p>
-				------------------<br></br>
-				Item1   $1:00<br></br>
-				Item2   $4:00<br></br>	
-				_____________<br></br>
-				Total:  $5:00<br></br>
-			</p>
-		</div>
+		<script>document.addEventListener("DOMContentLoaded", function(){myFunction()});</script>
+		<div class="orderLayout">
+			<h1>Cart</h1>			
+		<div id="myDropdown">
+			</div>
 		<div class="orderContent">
-			<h1><b>Order My Lunch</b></h1>
+			<h1 id="orderTitle"><b>Order My Lunch</b></h1>
 			<form>
 				<div class="cardInfo">
 					<div>
@@ -115,11 +110,12 @@
 						<input type="radio" name="radio">
 						<span class="checkmark"></span>
 					</label>
-				</div>
-				<div>
-					<button>Order Now</button>
-				</div>
+					<div>
+						<button>Order Now</button>
+					</div>
+				</div>				
 			</form>
+		</div>
 		</div>
 	</body>
 </html>

@@ -150,9 +150,23 @@ body{
 }
 
 /* Payment */
+.orderLayout{
+	display: flex;
+	flex-direction: column;	
+	justify-content: center;
+	align-items: center;
+}
+
 .orderContent{
 	width: 400px;
 	justify-content: center; 
+}
+
+#orderTitle{
+	display: flex;
+	flex-direction: column;	
+	justify-content: center;
+	align-items: center;
 }
 
 .cardInfo{
@@ -176,7 +190,10 @@ body{
 }
 
 .delivery{
-	width: 250px;
+	display: flex;
+	flex-direction: column;	
+	justify-content: center;
+	align-items: center;
 }
 
 

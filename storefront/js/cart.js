@@ -29,7 +29,7 @@ function addButton(id){
 	count = count + 1;
 	document.getElementById(id).value = count;
 }
-
+ 
 // menu item and price
 var itemList = [
 	["Beef: ",999],
@@ -40,7 +40,13 @@ var itemList = [
 	["Burger: ",999],
 	["Chicken: ",999],
 	["Tacos: ",999],
-	["Vegetable: ",999]
+	["Vegetable: ",999],
+	["Duck: ",1499],
+	["Steak: ",1699],
+	["Lobster: ",2499],
+	["Water: ", 0],
+	["Soda: ",199],
+	["Chicken Delight: ",1099]
 ];
 
 

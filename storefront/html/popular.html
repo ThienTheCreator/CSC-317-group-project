@@ -4,6 +4,8 @@
 		<meta charset="utf-8">
 		<title>Popular Items</title>
 		<link rel="stylesheet" type="text/css" href="../css/mystyle.css">
+		<script src="../js/menu.js"></script>
+		<script asnyc src="../js/cart.js"></script>
 	</head>
 	<body>
 		<header class="navBar">
@@ -28,6 +30,14 @@
 												<option value="Register">
 											</datalist>
 							<img src="../img/1024px-Search_Icon.svg.png" alt="" width="20px" height="20px">
+						</div>
+						<div class="dropdown">
+  							<button class="dropbtn" onclick="myFunction()">
+								Dropdown
+  							</button>
+  							<div class="dropdown-content" id="myDropdown">
+    								<div>Cart</div>
+  							</div>
 						</div>
 				</div>
 			</center>
@@ -74,32 +84,38 @@
 					<div>
 						<img src="../img/duck.jpg" alt="food item" width="250" height="150"></img>
 						<br>
-						<label>Duck:$14.99</label>
-						<br>
-						<button>-</button>&nbsp
-						<input type="text" id="food1_count" name="food1_count" required  value ="0" minlength="1" maxlength="2" size="2">&nbsp
-						<button>+</button>&nbsp
-						<button>order</button>
+						<div>
+							<div id="menu_name" class="shop-item-title">Duck: </div> 
+							<div id="menu_price" class="shop-item-price">$14.99</div>
+						</div>
+						<button class="button-minus">-</button>&nbsp;
+						<input class="food-quantity" type="text" id="food1_count" name="food1_count" value ="0" maxlength="2" size="1">&nbsp;
+						<button class="button-add">+</button>&nbsp;
+						<button class="button-order">order</button>
 					</div>
 					<div>
 						<img src="../img/steak.jpg" alt="food item" width="250" height="150"></img>
 						<br>
-						<label>Steak:$16.99</label>
-						<br>
-						<button>-</button>&nbsp
-						<input type="text" id="food1_count" name="food1_count" required  value ="0" minlength="1" maxlength="2" size="2">&nbsp
-						<button>+</button>&nbsp
-						<button>order</button>
+						<div>
+							<div id="menu_name" class="shop-item-title">Steak: </div> 
+							<div id="menu_price" class="shop-item-price">$16.99</div>
+						</div>
+						<button class="button-minus">-</button>&nbsp;
+						<input class="food-quantity" type="text" id="food1_count" name="food1_count" value ="0" maxlength="2" size="1">&nbsp;
+						<button class="button-add">+</button>&nbsp;
+						<button class="button-order">order</button>
 					</div>
 					<div>
 						<img src="../img/lobster.jpg" alt="food item" width="250" height="150"></img>
 						<br>
-						<label>Lobster:$24.99</label>
-						<br>
-						<button>-</button>&nbsp
-						<input type="text" id="food1_count" name="food1_count" required  value ="0" minlength="1" maxlength="2" size="2">&nbsp
-						<button>+</button>&nbsp
-						<button>order</button>
+						<div>
+							<div id="menu_name" class="shop-item-title">Lobster: </div> 
+							<div id="menu_price" class="shop-item-price">$24.99</div>
+						</div>
+						<button class="button-minus">-</button>&nbsp;
+						<input class="food-quantity" type="text" id="food1_count" name="food1_count" value ="0" maxlength="2" size="1">&nbsp;
+						<button class="button-add">+</button>&nbsp;
+						<button class="button-order">order</button>
 					</div>
 					</div>
 			</div>

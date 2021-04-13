@@ -4,6 +4,8 @@
 		<meta charset="utf-8">
 		<title>Deals</title>
 		<link rel="stylesheet" type="text/css" href="../css/mystyle.css">
+		<script src="../js/menu.js"></script>
+		<script asnyc src="../js/cart.js"></script>
 	</head>
 	<body>
 		<header class="navBar">
@@ -28,6 +30,14 @@
 												<option value="Register">
 											</datalist>
 							<img src="../img/1024px-Search_Icon.svg.png" alt="" width="20px" height="20px">
+						</div>
+						<div class="dropdown">
+  							<button class="dropbtn" onclick="myFunction()">
+								Dropdown
+  							</button>
+  							<div class="dropdown-content" id="myDropdown">
+    								<div>Cart</div>
+  							</div>
 						</div>
 				</div>
 			</center>
@@ -73,33 +83,39 @@
 				<div class="verticalItems">
 					<div>
 						<img src="../img/water.jpg" alt="food item" width="250" height="150"></img>
-						<br>							
-						<label>Water: free</label>
 						<br>
-						<button>-</button>&nbsp
-						<input type="text" id="food1_count" name="food1_count" required  value ="0" minlength="1" maxlength="2" size="2">&nbsp
-						<button>+</button>&nbsp
-						<button>order</button>
+						<div>
+							<div id="menu_name" class="shop-item-title">Water: </div> 
+							<div id="menu_price" class="shop-item-price">$0.00</div>
+						</div>
+						<button class="button-minus">-</button>&nbsp;
+						<input class="food-quantity" type="text" id="food1_count" name="food1_count" value ="0" maxlength="2" size="1">&nbsp;
+						<button class="button-add">+</button>&nbsp;
+						<button class="button-order">order</button>
 					</div>
 					<div>
 						<img src="../img/soda.jpg" alt="food item" width="250" height="150"></img>
 						<br>							
-						<label>Soda:$1.99</label>
-						<br>
-						<button>-</button>&nbsp
-						<input type="text" id="food1_count" name="food1_count" required  value ="0" minlength="1" maxlength="2" size="2">&nbsp
-						<button>+</button>&nbsp
-						<button>order</button>
+						<div>
+							<div id="menu_name" class="shop-item-title">Soda: </div> 
+							<div id="menu_price" class="shop-item-price">$1.99</div>
+						</div>
+						<button class="button-minus">-</button>&nbsp;
+						<input class="food-quantity" type="text" id="food1_count" name="food1_count" value ="0" maxlength="2" size="1">&nbsp;
+						<button class="button-add">+</button>&nbsp;
+						<button class="button-order">order</button>
 					</div>
 					<div>
 						<img src="../img/chicken.jpg" alt="food item" width="250" height="150"></img>
 						<br>							
-						<label>Chicken Delight:$10.99</label>
-						<br>
-						<button>-</button>&nbsp
-						<input type="text" id="food1_count" name="food1_count" required  value ="0" minlength="1" maxlength="2" size="2">&nbsp
-						<button>+</button>&nbsp
-						<button>order</button>
+						<div>
+							<div id="menu_name" class="shop-item-title">Chicken Delight: </div> 
+							<div id="menu_price" class="shop-item-price">$10.99</div>
+						</div>
+						<button class="button-minus">-</button>&nbsp;
+						<input class="food-quantity" type="text" id="food1_count" name="food1_count" value ="0" maxlength="2" size="1">&nbsp;
+						<button class="button-add">+</button>&nbsp;
+						<button class="button-order">order</button>
 					</div>
 				</div>
 			</div>
