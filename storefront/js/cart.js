@@ -1,39 +1,3 @@
-webStorage = window.sessionStorage;
-
-// Food object to be added to cart
-class FoodItem{
-    constructor(name, price, amount){
-        this.name = name;
-        this.price = price;
-        this.amount = amount;
-    }
-}
-
-// Cart object to be passed to the cart page
-class FoodCart{
-    constructor(){
-        this.cart = new Map();
-        this.FoodItem = [];
-    }
-
-    //Function to add new item to cart
-    updateCart(name, price, amount){
-        if (this.cart.has(name)){
-            this.cart.get(name).amount = amount;
-        } else {
-            var newItem = new FoodItem(name, price, amount);
-            this.cart.set(name, newItem);
-        }
-
-        webStorage.setItem('cart', this.cart);
-
-        console.log(name + ": " + this.cart.get(name).price + ", " + this.cart.get(name).amount);
-        
-    }
-}
-
-var cart = webStorage.getItem('cart');
-
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
 function myFunction() {
@@ -103,13 +67,8 @@ function ready(){
     console.log(foodQuant);
 
     var orderButtons = document.getElementsByClassName("button-order");
-    console.log(foodQuant);
-
-    for (var i = 0; i < foodQuant.length; i++) {
-        var input = foodQuant[i];
-    }
-
-
+    console.log(orderButtons);
+	
 	for (var i = 0; i < orderButtons.length; i++) {
 	        var order_button = orderButtons[i];
 	        order_button.addEventListener('click', orderItem);
