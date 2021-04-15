@@ -33,6 +33,20 @@ body{
 	padding: 0px 40px 0px 40px;
 }
 
+#searchBar{
+	height: 40px;
+}
+
+#searchIcon{
+	position: relative;
+	top: 10px;
+	width: 40px;
+	height: 40px;
+}
+
+#searchIcon:hover{
+	opacity: .5;
+}
 
 /* Cart */
 .dropdown {
