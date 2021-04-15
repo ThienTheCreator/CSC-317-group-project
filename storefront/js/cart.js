@@ -57,18 +57,9 @@ if (document.readyState == 'loading') {
 }
 
 function ready(){
-    var addButtons = document.getElementsByClassName("button-add");
-    console.log(addButtons);
-
-    var removeButtons = document.getElementsByClassName("button-minus");
-    console.log(removeButtons);   
-
-    var foodQuant = document.getElementsByClassName("food-quantity");
-    console.log(foodQuant);
-
     var orderButtons = document.getElementsByClassName("button-order");
     console.log(orderButtons);
-	
+
 	for (var i = 0; i < orderButtons.length; i++) {
 	        var order_button = orderButtons[i];
 	        order_button.addEventListener('click', orderItem);
