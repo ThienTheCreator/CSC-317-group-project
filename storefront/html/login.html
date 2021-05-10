@@ -5,6 +5,7 @@
 		<title>Login</title>
 		<link rel="stylesheet" type="text/css" href="../css/mystyle.css">
 		<script src="../js/search.js"></script>
+		<script src="../js/account.js"></script>
 	</head>
 	<body>
 		<header class="navBar">
@@ -66,20 +67,20 @@
 		<div class="background">
 			<div class="box" id="login">
 			<h1>Sign In</h1>
-			<form>	
+			<form method="post">	
 				<label for="userName">Username: </label>
 				
-				<input type="text" name="userName" placeholder="Username" required>
+				<input id="uName" type="text" name="userName" placeholder="Username" required> </input>
 								
 				<label for="passW">Password:</label>
 				
-				<input type="password" name="passW" placeholder="Password" required>
+				<input id="uPswrd" type="password" name="passW" placeholder="Password" required> </input>
 								
-				<input type="checkbox" name="remem">
+				<input type="checkbox" name="remem"></input>
 				<label for="hello">Remember me</label>
-				
-				<input type="submit" value="Login">
-				
+				<br>
+				<button type="submit" value="Login" onclick="check()">Login</button>
+				<br>				
 				<a href="register.html"> Don't have an account. Register.</a>
 			</form>
 			</div>
