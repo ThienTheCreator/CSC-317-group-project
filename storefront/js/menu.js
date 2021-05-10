@@ -104,7 +104,3 @@ function removeCartItem(event){
     }
     food_cart.updateCart(name, price, foodQuant.value);    
 }
-
-function changeAmount(name, price, amount){
-
-}
