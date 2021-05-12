@@ -67,7 +67,7 @@
 		<div class="background">
 			<div class="box" id="register">
 			<h1>Sign Up</h1>
-			<form>	
+			<form method="POST" action="http://localhost:3000/register">	
 				<legend>First Name:</legend>
 				<label for="firstName"></label>
 				<input type="text" name="firstName" placeholder="John"required></input>
@@ -90,7 +90,7 @@
 								
 				<legend>Re-enter Password:</legend>
 				<label for="passW"></label>
-				<input id="reuPswrd" type="password" name="passW" placeholder="Password" required></input>
+				<input id="reuPswrd" type="password" name="rePassW" placeholder="Password" required></input>
 						
 				<button id="uSubmit" type="submit" value="Register" onclick="store()">Submit</button><br>
 
