@@ -128,6 +128,7 @@ body{
 	grid-column: 2;
 	justify-content: center;	
 	align-items: center;
+	padding-top: 110px
 }
 
 .itemsPopular div{
@@ -156,7 +157,7 @@ body{
 /* Items for popular and specials*/
 .verticalItems{
 	display: flex;
-	padding-top: 150px;
+	padding-top: 0px;
 }
 
 .verticalItems > div{
