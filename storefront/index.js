@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 app.use(express.json());
+app.use(express.static(__dirname + "index.html"));
 
 
 // used to read data
@@ -55,9 +56,11 @@ app.post('/login',(req,res) => {
     let user = accounts.find(a => a.userName === req.body.userName);
     let validate = user.passW === req.body.passW;
 
+    console.log(validate);
+
     if(validate){
-      res.send("Welcome " + user.userName + ",");
-      return;
+      res.sendFile(__dirname + "/html/login.html");
+      return res.end("logged in");
     }
   }
   res.send("Account not found.");

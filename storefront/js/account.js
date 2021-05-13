@@ -32,8 +32,8 @@ function check() {
         for (let u = 0; u < stored_users.length; u++){
             if (usrName == stored_users[u].name && usrPw == stored_users[u].password) {
                 alert('You are logged in ' + usrName);
-                try {return window.location = "../index.html";}
-                catch(e) {console.log(e)}
+		return window.location = "../index.html";
+
              }
         }
     } else {
