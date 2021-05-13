@@ -5,7 +5,7 @@
 		<title>Register</title>
 		<link rel="stylesheet" type="text/css" href="../css/mystyle.css">
 		<script src="../js/search.js"></script>
-		<!--<script src="../js/account.js"></script>-->
+		<script src="../js/account.js"></script>
 	</head>
 	<body>
 		<header class="navBar">
@@ -30,6 +30,10 @@
 									<option value="Register">
 								</datalist>
 							<input type="image" src="../img/1024px-Search_Icon.svg.png" id="searchIcon" alt="o" onclick="clickSearch()">
+						</div>	
+						<div>
+							<div id="loggedIn"></div><br>
+							<button id="logOut" onclick="logOut()">Logout</button>
 						</div>		
 				</div>
 			</center>
@@ -67,7 +71,7 @@
 		<div class="background">
 			<div class="box" id="register">
 			<h1>Sign Up</h1>
-			<form method="POST">	
+			<form method="POST" action="http://localhost:3000/register" target="formSending">	
 				<legend>First Name:</legend>
 				<label for="firstName"></label>
 				<input type="text" name="firstName" placeholder="John"required></input>
@@ -96,6 +100,7 @@
 
 				<a href="login.html">Already have an account? Login</a>
 			</form>
+			<iframe type="hidden" name="formSending" style="position: absolute;width:0;height:0;border:0;"></iframe>
 			</div>
 		</div>
 	</body>

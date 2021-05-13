@@ -1,7 +1,10 @@
 const express = require('express');
 const app = express();
+const path = require('path');
 app.use(express.json());
-app.use(express.static(__dirname + "index.html"));
+app.use(express.static(__dirname));
+
+const account = require('./js/account');
 
 
 // used to read data
@@ -49,18 +52,16 @@ app.post('/register',(req,res) => {
   }
 })
 
-
 // authenticate username and password info
 app.post('/login',(req,res) => {
   for(var item in accounts){
     let user = accounts.find(a => a.userName === req.body.userName);
     let validate = user.passW === req.body.passW;
 
-    console.log(validate);
-
     if(validate){
-      res.sendFile(__dirname + "/html/login.html");
-      return res.end("logged in");
+      res.send("Welcome " + user.firstName);
+      console.log(account);
+      return;
     }
   }
   res.send("Account not found.");

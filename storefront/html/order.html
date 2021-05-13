@@ -6,6 +6,7 @@
 		<link rel="stylesheet" type="text/css" href="../css/mystyle.css">
 		<script src="../js/cart.js"></script>
 		<script src="../js/search.js"></script>
+		<script src="../js/account.js"></script>
 	</head>
 	
 	<body>
@@ -32,7 +33,11 @@
 									<option value="Register">
 								</datalist>
 							<input type="image" src="../img/1024px-Search_Icon.svg.png" id="searchIcon" alt="o" onclick="clickSearch()">
-						</div>	
+						</div>
+						<div>
+							<div id="loggedIn"></div><br>
+							<button id="logOut" onclick="logOut()">Logout</button>
+						</div>		
 				</div>
 			</center>
 						<div class="links">
@@ -73,7 +78,7 @@
 			</div>
 		<div class="orderContent">
 			<h1 id="orderTitle"><b>Order My Lunch</b></h1>
-			<form method="POST" action="http://localhost:3000/pay">
+			<form method="POST" action="http://localhost:3000/pay" target="formSending">
 				<input type="hidden" name="cartData" value="a" id="hiddenCart">
 				<div class="cardInfo">
 					<div>
@@ -119,6 +124,7 @@
 					</div>
 				</div>				
 			</form>
+		<iframe type="hidden" name="formSending" style="position: absolute;width:0;height:0;border:0;"></iframe>
 		</div>
 		</div>
 	</body>

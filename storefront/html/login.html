@@ -11,26 +11,30 @@
 		<header class="navBar">
 			<center>	
 				<div class="logo">
-						<div>
-							<a href="../index.html">
-							<img id="scotter" src="../img/logo.png" alt="logo" height="100px" width="100px"></a><b>
-							<font size=10px color="orange">SF Kitchen</font></b>
-						</div>
-						<div> 
-							<input list="searches" id="searchBar" placeholder="Search.." onkeydown="enterSearch()">
-								<datalist id="searches">
-									<option value="Home">
-									<option value="Menu">
-									<option value="Popular Items">
-									<option value="Special Deal">
-									<option value="Payment">
-									<option value="FAQ">
-									<option value="About Us">
-									<option value="Login">
-									<option value="Register">
-								</datalist>
-							<input type="image" src="../img/1024px-Search_Icon.svg.png" id="searchIcon" alt="o" onclick="clickSearch()">
-						</div>	
+					<div>
+						<a href="../index.html">
+						<img id="scotter" src="../img/logo.png" alt="logo" height="100px" width="100px"></a><b>
+						<font size=10px color="orange">SF Kitchen</font></b>
+					</div>
+					<div> 
+						<input list="searches" id="searchBar" placeholder="Search.." onkeydown="enterSearch()">
+							<datalist id="searches">
+								<option value="Home">
+								<option value="Menu">
+								<option value="Popular Items">
+								<option value="Special Deal">
+								<option value="Payment">
+								<option value="FAQ">
+								<option value="About Us">
+								<option value="Login">
+								<option value="Register">
+							</datalist>
+						<input type="image" src="../img/1024px-Search_Icon.svg.png" id="searchIcon" alt="o" onclick="clickSearch()">
+					</div>
+					<div>
+						<div id="loggedIn"></div><br>
+						<button id="logOut" onclick="logOut()">Logout</button>
+					</div>	
 				</div>
 			</center>
 						<div class="links">
@@ -67,7 +71,7 @@
 		<div class="background">
 			<div class="box" id="login">
 			<h1>Sign In</h1>
-			<form method="post">	
+			<form method="post" action="http://localhost:3000/login" target="formSending">	
 				<label for="userName">Username: </label>
 				
 				<input id="uName" type="text" name="userName" placeholder="Username" required> </input>
@@ -83,6 +87,7 @@
 				<br>				
 				<a href="register.html"> Don't have an account. Register.</a>
 			</form>
+			<iframe type="hidden" name="formSending" style="position: absolute;width:0;height:0;border:0;"></iframe>
 			</div>
 		</div>
 	</body>
