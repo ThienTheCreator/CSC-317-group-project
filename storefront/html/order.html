@@ -7,7 +7,9 @@
 		<script src="../js/cart.js"></script>
 		<script src="../js/search.js"></script>
 	</head>
+	
 	<body>
+		
 		<header class="navBar">
 			<center>	
 				<div class="logo">
@@ -71,7 +73,8 @@
 			</div>
 		<div class="orderContent">
 			<h1 id="orderTitle"><b>Order My Lunch</b></h1>
-			<form>
+			<form method="POST" action="http://localhost:3000/pay">
+				<input type="hidden" name="cartData" value="a" id="hiddenCart">
 				<div class="cardInfo">
 					<div>
 						<label for="">Name on Card:</label>
@@ -112,7 +115,7 @@
 						<span class="checkmark"></span>
 					</label>
 					<div>
-						<button>Order Now</button>
+						<button onClick="cartToSubmit()">Order Now</button>
 					</div>
 				</div>				
 			</form>

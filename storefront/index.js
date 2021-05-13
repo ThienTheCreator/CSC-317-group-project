@@ -11,17 +11,18 @@ app.use(express.urlencoded({
 
 // use this to see the data
 // take this out after debuging everthing
-app.get('/data',(req,res) => {
+app.get('/data1',(req,res) => {
   res.send(accounts);
+})
+
+app.get('/data2',(req,res) => {
+  res.send(cart);
 })
 
 
 // store the accounts
 // has one account already in to test
-const accounts = [
-{firstName: "a", lastName: "a", Email: "a@a", userName: "a", passW: "a"}
-]
-
+const accounts = []
 
 // register the account if the password match the re enter password
 app.post('/register',(req,res) => {
@@ -41,7 +42,7 @@ app.post('/register',(req,res) => {
   
   if(passW == req.body.rePassW){
     accounts.push(account);
-    res.send(accounts);
+    res.send("Create an account for username: " + account.userName);
   }else{
     res.send("Did not create an account");
   }
@@ -55,13 +56,27 @@ app.post('/login',(req,res) => {
     let validate = user.passW === req.body.passW;
 
     if(validate){
-      res.send('<h1>hello</h1>');
+      res.send("Welcome " + user.userName + ",");
       return;
     }
   }
   res.send("Account not found.");
 })
 
+//create an empty cart
+const cart = []
+
+// get data of the cart
+app.post('/pay',(req,res) => {
+  const cartData = req.body.cartData;
+  
+  if(cartData != ""){
+    cart.push(cartData);
+    res.send("Cart Received!");
+  }else{
+    res.send("Error receiving cart!");
+  }
+})
 
 //opens the server on port 3000
 const port = '3000';

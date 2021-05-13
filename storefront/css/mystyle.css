@@ -102,7 +102,7 @@ body{
 	display: grid;
 	padding: 10px;
 	grid-template-columns: 1fr 800px 1fr;
-	grid-template-rows: 5fr 1fr;
+	grid-template-rows: 5fr;
 	grid-column-gap:1em;
 	grid-row-gap:1em;
 }
@@ -114,7 +114,6 @@ body{
 .ad1{
 	padding-right: 30px;
 	text-align: right;
-	vertical-align: bottom;
 }
 
 .ad2{
@@ -128,7 +127,7 @@ body{
 	grid-column: 2;
 	justify-content: center;	
 	align-items: center;
-	padding-top: 110px
+	padding-top: 110px;
 }
 
 .itemsPopular div{
@@ -140,10 +139,9 @@ body{
 .menuItems{
 	display: grid;
 	padding: 10px;
+	height: 800px;
 	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: 1fr 1fr 1fr;
-	grid-column-gap:1em;
-	grid-row-gap:1em;
+	grid-template-rows: 1fr 1fr 1fr 1fr;
 }
 
 #menu_container{
@@ -153,6 +151,14 @@ body{
 	display: inline;
 }
 
+
+/* Popular Items in the menu */
+#popItemsMenu{
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
 
 /* Items for popular and specials*/
 .verticalItems{
@@ -299,7 +305,7 @@ body{
 	font-size: 16px;
 }
 
-.box input[type="submit"]{
+.box button[type="submit"]{
 	height: 40px;
 	width: 100%;
 	border: none;

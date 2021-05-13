@@ -65,12 +65,15 @@ function orderItem(event){
 	var foodQuant = food.getElementsByClassName("food-quantity")[0];
 	var amount = parseInt(foodQuant.value);
 
+	// Get the cookie of the items in the cart
 	var items;
 	if(getCookie('a') != undefined){
 		items = JSON.parse(getCookie('a'));
 	}
 	
 	var found = false;
+	
+	//if the cookie exist store the contents in a temporary array
 	if(items != undefined)
 	for(var i = 0; i < items.length; i++){
 		if(name == items[i][0]){
@@ -87,13 +90,16 @@ function orderItem(event){
 	}
 	
 	var itemNum;
+
+	// get the price of the item from itemList
 	for(var i = 0; i < itemList.length; i++){
 		if(itemList[i][0] == name){
 			itemNum = i;
 		}
 	}
 	
-	if(!found && amount != 0){
+	// add the cookie is not empty and item is greater than 0 add to cart
+	if(!found && amount > 0){
 		if(items != undefined)
 			items.push([name,amount,itemList[itemNum][1]]);
 		else
@@ -138,5 +144,15 @@ function print(){
 		var cartRowContents = '<div>-----------------</div><div>'+ cartStr +'</div>';
 		cartRow.innerHTML = cartRowContents;
 		cartItems.append(cartRow);
+	}
+}
+
+function cartToSubmit(){
+	// Get the cookie of the items in the cart
+	// If found change the value of on of the input
+	if(getCookie('a') != undefined){
+		let items = getCookie('a');
+		document.getElementById("hiddenCart").value = items;
+		document.cookie = "a=hello;expires= 18 Dec 2020 12:00:00 UTC";
 	}
 }
