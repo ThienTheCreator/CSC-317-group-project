@@ -4,8 +4,6 @@ const path = require('path');
 app.use(express.json());
 app.use(express.static(__dirname));
 
-const account = require('./js/account');
-
 
 // used to read data
 app.use(express.urlencoded({
@@ -36,12 +34,20 @@ app.post('/register',(req,res) => {
   const userName = req.body.userName;
   const passW = req.body.passW;
   
+  var hashPw = 0, i, chr;
+  for (i = 0; i < passW.length; i++) {
+    chr   = passW.charCodeAt(i);
+    hashPw  = ((hashPw << 5) - hashPw) + chr;
+    hashPw |= 0; // Convert to 32bit integer
+  }
+  
+
   let account = {
     firstName,
     lastName,
     Email,
     userName,
-    passW
+    hashPw
   }
   
   if(passW == req.body.rePassW){
@@ -56,7 +62,19 @@ app.post('/register',(req,res) => {
 app.post('/login',(req,res) => {
   for(var item in accounts){
     let user = accounts.find(a => a.userName === req.body.userName);
-    let validate = user.passW === req.body.passW;
+    let passW = req.body.passW
+
+    var hashPw = 0, i, chr;
+    for (i = 0; i < passW.length; i++) {
+      chr   = passW.charCodeAt(i);
+      hashPw  = ((hashPw << 5) - hashPw) + chr;
+      hashPw |= 0; // Convert to 32bit integer
+    }
+
+    console.log(user.hashPw);
+    console.log(hashPw);
+
+    let validate = user.hashPw === hashPw;
 
     if(validate){
       res.send("Welcome " + user.firstName);

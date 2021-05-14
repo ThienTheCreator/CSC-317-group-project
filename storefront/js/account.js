@@ -11,7 +11,7 @@ function ready(){
     
     if (siteUsrName){
         loggedIn.innerHTML = "Hello " + siteUsrName;
-	logOutButton.style.display = "block";
+	logOutButton.style.display = "b";
     } else {
         logOutButton.style.display = "none";
     }
@@ -30,9 +30,11 @@ function store() {
         if(stored_users) {
             stored_users.push({name: usrName,});
             localStorage.setItem('users', JSON.stringify(stored_users));
+	    localStorage.setItem('siteName', usrName);
 	    return window.location = "../index.html";
         } else {
             localStorage.setItem('users', JSON.stringify([{name: usrName,}]));
+	    localStorage.setItem('siteName', usrName);
             return window.location = "../index.html";
         }
     } else {
@@ -63,5 +65,6 @@ function check() {
 }
 
 function logOut() {
-	return localStorage.setItem('siteName', "");
+	localStorage.setItem('siteName', "");
+	return window.location = "../index.html";
 }
